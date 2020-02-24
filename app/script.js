@@ -1,48 +1,60 @@
 'use strict';
 
-// let num = 25;
-
-// function showFirstMessage(text){
-//     alert(text);
-//     let num = 20;
-// }
-// showFirstMessage('speedrun');
-
-// console.log(num);
-
-
-// let calc = function (a, b) {
-//     return (a + b);
+// let options = {
+//     width: 1024,
+//     height: 1024,
+//     name: "test"
 // };
 
+// console.log(options);
+// options.bool = false;
+// options.colors = {
+//     border: "black",
+//     bg: "red"
+// };
+// delete options.bool;
+
+// console.log(options);
+
+// for (let key in options) {
+//     console.log('свойствo ' + key + ' имеет значение ' + options[key]);
+// };
+
+// console.log(Object.keys(options).length);
 
 
-// let calc = (a,b) => a+b;
+// let arr = ["first", 2, 3, "four", 5];
 
-// console.log(calc(3,5));
 
-function first() {
 
-    setTimeout( function(){
-        console.log(1);
-        }, 500 );
+// arr.forEach(function(item, i, mass){
+//     console.log(i + ': ' + item + " (массив: " + mass + ")");
+// });
+
+// // console.log(arr);
+
+// let mass = [1, 3, 4, 6, 7];
+
+// for (let key of mass){
+//     console.log(key);
+// };
+
+// let ans = prompt("" , ""),
+//     arr = [];
+
+// arr = ans.split(',');
+// console.log(arr);
+
+// let arr = ["aawe", "aaa", 'zzz', "rer"],
+// i = arr.join(', ');
+
+// console.log(i);
+
+let arr = ["aawe", "aaa", 'zzz', "rer", 1, 5, 9, 15],
+i = arr.sort(compareNum);
+
+function compareNum(a,b){
+    return a-b;
 }
 
-function second(){
-    console.log(2);
-}
-
-first();
-second();
-
-
-function learnJs(lang, callback) {
-    console.log('I learn' + lang);
-    callback();
-}
-
-function done() {
-    console.log('I finish 3 lesson');
-}
-
-learnJs('JS', done);
+console.log(i);
