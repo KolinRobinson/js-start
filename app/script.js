@@ -1,60 +1,34 @@
 'use strict';
 
-// let options = {
-//     width: 1024,
-//     height: 1024,
-//     name: "test"
-// };
+let btn = document.querySelector('.btn'),
+    elem = document.querySelector('.box');
 
-// console.log(options);
-// options.bool = false;
-// options.colors = {
-//     border: "black",
-//     bg: "red"
-// };
-// delete options.bool;
+function myAnimate(){
+    let pos = 0;
 
-// console.log(options);
+    let id = setInterval(frame, 10);
 
-// for (let key in options) {
-//     console.log('свойствo ' + key + ' имеет значение ' + options[key]);
-// };
-
-// console.log(Object.keys(options).length);
-
-
-// let arr = ["first", 2, 3, "four", 5];
-
-
-
-// arr.forEach(function(item, i, mass){
-//     console.log(i + ': ' + item + " (массив: " + mass + ")");
-// });
-
-// // console.log(arr);
-
-// let mass = [1, 3, 4, 6, 7];
-
-// for (let key of mass){
-//     console.log(key);
-// };
-
-// let ans = prompt("" , ""),
-//     arr = [];
-
-// arr = ans.split(',');
-// console.log(arr);
-
-// let arr = ["aawe", "aaa", 'zzz', "rer"],
-// i = arr.join(', ');
-
-// console.log(i);
-
-let arr = ["aawe", "aaa", 'zzz', "rer", 1, 5, 9, 15],
-i = arr.sort(compareNum);
-
-function compareNum(a,b){
-    return a-b;
+    function frame () {
+        if (pos == 400) {
+            clearInterval(id);
+        } else {
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos + 'px';
+        }
+    }
 }
 
-console.log(i);
+btn.addEventListener('click', myAnimate);
+
+let btnBlock = document.querySelector('.btn-block'),
+    btns = document.getElementsByTagName('button');
+
+btnBlock.addEventListener('click', function(event) {
+    if (event.target && event.target.matches('button.first') ){
+        myAnimate();
+    } else {
+
+    }
+});
+
