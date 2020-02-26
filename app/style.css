@@ -23,3 +23,20 @@ button {
     left: 0;
     background-color: royalblue;
 }
+
+
+.modal_one {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 200px;
+    border: 1px solid darkblue;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px black;
+    display: none;
+    transition: all 2s ease-in-out;
+}
