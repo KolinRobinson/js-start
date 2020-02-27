@@ -1,58 +1,31 @@
 'use strict';
 
-// let btn = document.querySelector('.btn'),
-//     elem = document.querySelector('.box');
-
-// function myAnimate(){
-//     let pos = 0;
-
-//     let id = setInterval(frame, 10);
-
-//     function frame () {
-//         if (pos == 400) {
-//             clearInterval(id);
-//         } else {
-//             pos++;
-//             elem.style.top = pos + 'px';
-//             elem.style.left = pos + 'px';
-//         }
-//     }
-// }
-
-// btn.addEventListener('click', myAnimate);
-
-// let btnBlock = document.querySelector('.btn-block'),
-//     btns = document.getElementsByTagName('button');
-
-// btnBlock.addEventListener('click', function(event) {
-//     if (event.target && event.target.matches('button.first') ){
-//         myAnimate();
-//     } else {
-
-//     }
-// });
-
-let btn = document.getElementById('btn'),
-    showModal = document.querySelector('#modal-show');
-
-function hello() {
-    btn.hidden = true;
+function randomNumb(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1);
+    rand = Math.round(rand);
+    return rand;
 }
 
 
+let 
+a = -5,
+b = 5,
+number = randomNumb(a, b),
+btn = document.querySelector('#btn_check'),
+userNum = document.querySelector('#user_num'),
+info = document.querySelector("#text_info");
 
-btn.hidden = false;
+console.log(number);
 
-function show(){
-    let modal = document.querySelector('.modal_one');
-    modal.style.display = "block";
-}
+btn.addEventListener('click', function(){
+    if (userNum.value == number ){
+        alert('Пабедааааа');
+        location.reload();
+    } else if(userNum.value >= -5 && userNum.value <= 5) {
+        
+        info.innerText = 'не угадали';
+    } else {
+        info.innerText = 'введите число от ' + a + " до " + b;
+    }
+});
 
-showModal.addEventListener('click', show);
-
-function hide(){
-    let modal = document.querySelector('.modal_one');
-    modal.style.display = "none";
-}
-
-btn.addEventListener('click', hide);
