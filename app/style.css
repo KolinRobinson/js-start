@@ -1,8 +1,24 @@
-.wrapper{
+.tabs{
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 50px;
+}
+
+.active{
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+li{
+    text-decoration: none;
+    cursor: pointer;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.tabs ul {
     display: flex;
+    width: 20%;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+    justify-content: space-between;
 }
