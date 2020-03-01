@@ -23,11 +23,20 @@ li{
     justify-content: space-between;
 }
 
-.block{
+.block-1{
     width: 150px;
     height: 150px;
-    background-color: palevioletred;
+    background-color: bisque;
+    border: 2px solid grey;
     margin: 50px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green{
+    border: 4px solid green;
 }
 
 .line{
