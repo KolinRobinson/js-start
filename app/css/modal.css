@@ -1,0 +1,89 @@
+
+.modal-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.modal {
+    width: 250px;
+    height: 320px;
+    border: 1px solid black;
+    padding: 10px;
+    background: #fff;   
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto; 
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+}
+
+.button-close{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.button-close::after, .button-close::before{
+    content: '|';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.button-close::before{
+    transform: rotate(45deg);
+    top: -4px;
+}
+
+.button-close::after{
+    transform: rotate(135deg);
+}

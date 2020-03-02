@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-
-    <div class="block-1"></div>
-
-
-
-
-
+    <button class="modal-show" data-modal="#sign-in">show window</button>
     
-    <script src="script.js"></script>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <div class="modal-wrap hide" >
+        <div class="modal hide" id="sign-in">
+            Our modal window 
+            <button class="modal-close" data-modal="#sign-in"><span class='button-close'></span></button>
+        </div>
+    </div>
+    
+    <script src="js/modal.js"></script>  
+
 </body>
 </html>
