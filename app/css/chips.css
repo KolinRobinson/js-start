@@ -1,0 +1,26 @@
+.chips-field{
+    width: 15%;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+.chips {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border-radius: 12px;
+
+    color: lavenderblush;
+}
+
+.ships-black{
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.ships-red{
+    background-color: rgba(255, 0, 0, .6);
+}
+
+.ships-green{
+    background-color: rgba(255, 0, 0, .6);
+}
