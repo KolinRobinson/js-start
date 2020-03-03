@@ -22,21 +22,20 @@ function showModal(){
     document.querySelector(modalId).classList.remove('hide');
     document.onkeydown = function(event){
         if(event.keyCode == 27){
-            modalWrap.forEach(function(element){
-                element.classList.add('hide');
-            });
+            closeModal();
         }
     };
 }
 
 function closeModal(){
-    let modalId = this.dataset.modal;
-    document.querySelector(modalId).classList.add('hide');
+    modalWrap.forEach(function(e){
+        e.classList.add('hide'); 
+    });
 }
 
 function closeModalWrap(e){
-        if( e.target !== this){
-            return false;
-        }
-        this.classList.add('hide');    
+    if( e.target !== this){
+        return false;
+    }
+    this.classList.add('hide');    
 }
